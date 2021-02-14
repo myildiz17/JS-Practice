@@ -99,15 +99,40 @@
 // call()
 // arr()
 
-const calcAverage = (a, b, c) => (a + b + c) / 3;
+// const calcAverage = (a, b, c) => (a + b + c) / 3;
 
 
-const aveD = calcAverage(44,23,71)
-const aveK = calcAverage(65,54,49)
+// const aveD = calcAverage(44,23,71)
+// const aveK = calcAverage(65,54,49)
 
-console.log(aveD, aveK)
+// console.log(aveD, aveK)
 
-const checkWinner = (a,b)=>{
-    a>=2*b ? console.log("Dulphin is the winner") : console.log("Koala is the winner")
+// const checkWinner = (a,b)=>{
+//     a>=2*b ? console.log("Dulphin is the winner") : console.log("Koala is the winner")
+// }
+// checkWinner(aveD, aveK)
+
+// const arr1 = ["a","b","c"]
+// const arr2 = new Array("a","b","c")
+
+
+// arr1.push("z")
+
+// console.log(arr1.includes("c"))
+
+const arrBill = [125,555,44]
+const arrTips = []
+const arrTotal = []
+
+const calTip = (bill)=>{
+    const tip = bill>50 ? bill*0.2 : bill*0.15
+    arrTips.push(tip)
+    arrTotal.push(tip+bill) 
 }
-checkWinner(aveD, aveK)
+
+calTip(arrBill[0])
+calTip(arrBill[1])
+calTip(arrBill[2])
+
+console.log( arrBill, arrTips, arrTotal)
+
