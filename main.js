@@ -101,7 +101,6 @@
 
 // const calcAverage = (a, b, c) => (a + b + c) / 3;
 
-
 // const aveD = calcAverage(44,23,71)
 // const aveK = calcAverage(65,54,49)
 
@@ -115,24 +114,142 @@
 // const arr1 = ["a","b","c"]
 // const arr2 = new Array("a","b","c")
 
-
 // arr1.push("z")
 
 // console.log(arr1.includes("c"))
 
-const arrBill = [125,555,44]
-const arrTips = []
-const arrTotal = []
+// const arrBill = [125,555,44]
+// const arrTips = []
+// const arrTotal = []
 
-const calTip = (bill)=>{
-    const tip = bill>50 ? bill*0.2 : bill*0.15
-    arrTips.push(tip)
-    arrTotal.push(tip+bill) 
-}
+// const calTip = (bill)=>{
+//     const tip = bill>50 ? bill*0.2 : bill*0.15
+//     arrTips.push(tip)
+//     arrTotal.push(tip+bill)
+// }
 
-calTip(arrBill[0])
-calTip(arrBill[1])
-calTip(arrBill[2])
+// calTip(arrBill[0])
+// calTip(arrBill[1])
+// calTip(arrBill[2])
 
-console.log( arrBill, arrTips, arrTotal)
+// console.log( arrBill, arrTips, arrTotal)
 
+// const obj1={
+//     firends: ["Mike", "john"],
+//     name: "Deli"
+// }
+
+// console.log(obj1.name+ " has "+ obj1.firends.length+" firends and his best friend is called "+ obj1.firends[0] )
+// console.log(`${obj1.name} has ${obj1.firends.length} firends and his best friend is called ${obj1.firends[0]}` )
+
+// const ali={
+//     name: 'Ali',
+//     job: 'Teacher',
+//     hasLicesne: true,
+//     birthYear: 1995,
+//     calAge: function(){
+//     return 2037-this.birthYear
+//     }
+// }
+
+// console.log(ali.calAge)
+// console.log(`${ali.name} is a ${ali.calAge()}-year old ${ali.job}, and ${ali.hasLicesne ? "has a driver's license" : "does not have a driver's license"}`)
+
+// const john = {
+//     name: 'John',
+//     mass: 92,
+//     height: 1.95,
+//     cal: function(){
+//         this.BMI = this.mass/(this.height*this.height)
+//         return this.BMI
+//     }
+// }
+// const Mark = {
+//     name: 'Mark',
+//     mass: 78,
+//     height: 1.69,
+//     cal: function(){
+//         this.BMI= this.mass/(this.height*this.height)
+//         return this.BMI
+//     }
+// }
+// console.log(john.cal(),Mark.cal())
+// john.cal()>Mark.cal() ? console.log(`Johns BMI ${john.cal()} is higher than ${Mark.cal()}`) : console.log("the opposite")
+
+// for (let i=0; i<10; i++){
+//     console.log(`hi ${i}`)
+// }
+
+// const arr = ["selam", 5, true, ["a", 3, 2 + 5]];
+
+// for(el of arr){
+//     console.log(el)
+// }
+// const arr2 = [];
+// for (let i = 0; i < arr.length; i++) {
+//   arr2[i] = typeof arr[i];
+// }
+// console.log(arr2);
+
+// const years = [1998, 1996, 2000, 2006]
+// const ages=[]
+
+// for(let i=0; i<years.length; i++){
+//     ages.push(years[i])
+// }
+
+// console.log(ages)
+
+// const arr = ["selam", 5, true, ["a", 3, 2 + 5]];
+
+// for(let i=0; i<arr.length; i++){
+//     if(typeof arr[i] !== 'string') continue
+//     console.log(arr[i])
+// }
+
+// const arr = ["selam", 5, true, ["a", 3, 2 + 5]];
+
+// for(let i=0; i<arr.length; i++){
+//     if(typeof arr[i] === 'number') break
+//     console.log(arr[i])
+// }
+
+// for(let i=0; i<arr.length; i++){
+//     for(let j=0; j<4; j++){
+//         console.log(arr[i])
+//     }
+// }
+
+// const arr = ["run", "jump", "dive"];
+
+// let i = 0
+// while(i<arr.length){
+// console.log("hi", i)
+// i++
+// }
+
+// let ranNum = 0;
+// while (ranNum !== 6) {
+//     ranNum = Math.floor(Math.random() * 7);
+//   console.log(ranNum);
+// }
+
+const tips = [];
+const total = [];
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+const calAverage = (bills) => {
+  for (let i = 0; i < bills.length; i++) {
+    if (bills[i] > 50) {
+      tips.push(bills[i] * 0.15);
+      total.push(bills[i] + bills[i] * 0.15);
+    } else {
+      tips.push(bills[i] * 0.2);
+      total.push(bills[i] + bills[i] * 0.2);
+    }
+  }
+
+  console.log(tips, total);
+};
+
+calAverage(bills);
