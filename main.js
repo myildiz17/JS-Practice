@@ -234,22 +234,78 @@
 //   console.log(ranNum);
 // }
 
-const tips = [];
-const total = [];
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// const tips = [];
+// const total = [];
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 
-const calAverage = (bills) => {
-  for (let i = 0; i < bills.length; i++) {
-    if (bills[i] > 50) {
-      tips.push(bills[i] * 0.15);
-      total.push(bills[i] + bills[i] * 0.15);
-    } else {
-      tips.push(bills[i] * 0.2);
-      total.push(bills[i] + bills[i] * 0.2);
-    }
-  }
+// const calAverage = (bills) => {
+//   for (let i = 0; i < bills.length; i++) {
+//     if (bills[i] > 50) {
+//       tips.push(bills[i] * 0.15);
+//       total.push(bills[i] + bills[i] * 0.15);
+//     } else {
+//       tips.push(bills[i] * 0.2);
+//       total.push(bills[i] + bills[i] * 0.2);
+//     }
+//   }
 
-  console.log(tips, total);
-};
+//   console.log(tips, total);
+// };
 
-calAverage(bills);
+// calAverage(bills);
+
+// const arr = ["selam", 5, true, ["a", 3, 2 + 5]];
+
+// const [, x, ,[, b, c]] = arr;
+// console.log(x, b, c);
+
+// const obj = { name: "Ali", age: 5, job: "Teacher"}
+
+// // const { name, age , job} = obj
+// // console.log(name , age, job);
+
+// const { name: ad, age: yas , job: is, wife: es="Nalan"} = obj
+// console.log(ad , yas, is, es);
+
+// const arr = [1, 2, 3];
+// const newArr = [0, ...arr, 6];
+// console.log(newArr);
+// console.log(...newArr);
+
+// const str = "selam"
+
+// const arr = [...str]
+
+// const arr= str.split('')
+// console.log(arr)
+
+// const obj = { name: "Ali", age: 5, job: "Teacher"}
+// const newArray = {...obj, es: "Pakize"}
+// console.log(newArray)
+
+// const obj = { name: "Ali", age: 5, job: "Teacher"}
+
+// const { name, ...weekdays }=  obj
+// console.log(weekdays)
+
+// const sum = (...input) => {
+//   let sum = 0;
+//   for (let i = 0; i < input.length; i++) {
+//     sum += input[i];
+//   }
+//   console.log(sum);
+// };
+
+// sum(2, 3);
+// sum(2, 3, 4, 5, 6);
+// sum(2, 3, 7, 8, 9, 3, 4, 5);
+
+// const decide = 0 || 10
+// console.log(decide)
+// => 10
+// const decide = 0 ?? 10
+// console.log(decide)
+// => 0
+
+
+
