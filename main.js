@@ -307,5 +307,252 @@
 // console.log(decide)
 // => 0
 
+// const arr = [1,4,7,2,8]
 
+// // for(const item of arr) console.log(item)
 
+// // for(const item of arr.entries()) console.log(item)
+// for(const [i, el] of arr.entries()) console.log(i, el)
+
+// const obj = { name: "Ali", age: 5, job: "Teacher"}
+
+// if(obj.name){
+//     console.log(obj.name)
+// }else{
+//     console.log("does not exist")
+// }
+
+// console.log(obj.name ? obj.name : "does not exist")
+// console.log(obj?.name ?? "does not exist")
+
+// const obj = { name: "Ali", age: 5, job: "Teacher"}
+
+// for(const item of Object.keys(obj)) console.log(item)
+// for(const el of Object.values(obj)) console.log(el)
+
+// const arr = ["ali", 5, 8, true];
+// for (const [i, el] of arr.entries()) console.log(i, el);
+
+// const obj = { name: "Ali", age: 5, job: "Teacher" };
+// for(const [i, v] of Object.entries(obj)) console.log(i,v)
+
+// const arr = ['a', 3, 'b', true, 7]
+// for( const item of arr)console.log(item)
+
+// for(const item of arr.entries())console.log(item)
+// for(const [i, val] of arr.entries())console.log(i, val)
+
+// const obj = { name: "Ali", age: 5, job: "Teacher"}
+
+// for(const item of Object.keys(obj))console.log(item)
+// for(const item of Object.values(obj))console.log(item)
+// for(const [i,v] of Object.entries(obj))console.log(i,v)
+
+// console.log(aSet)
+
+// console.log(new Set('selam').size)
+// const aSet = new Set(['a','a',1,2,3,3])
+// // console.log(aSet.has("a"))
+// // console.log(aSet.has("b"))
+// aSet.add('c')
+// aSet.delete('a')
+// // aSet.clear()
+
+// for(const item of aSet) console.log(item)
+
+// const arr=[1,1,1,1,2,2,2,3,3,3,4,4,4]
+
+// const aSet = [...new Set(arr)]
+// console.log(aSet)
+
+// const airline = "Turkish Airlines"
+// const plane = 'A37H'
+
+// console.log((airline.length)) //16
+// console.log(('BH7J89'.length)) //6
+// console.log(('BH7J89'[0])) //B
+// console.log(airline.indexOf('A')) //8
+// console.log(airline.lastIndexOf('r')) //10
+// console.log(airline.lastIndexOf('Airlines')) //8
+// console.log(airline.slice(8)) //Airlines
+// console.log(airline.slice(8, 11)) //Air
+// console.log(airline.slice(0, airline.indexOf(" "))) //Turkish
+// console.log(airline.slice(airline.lastIndexOf(" ")+1)) //Airlines
+// console.log(airline.slice(-2)) //es
+
+// const checkMiddleSeat =(seat)=>{
+//     (seat.slice(-1) === "B" || seat.slice(-1) === "E") ? console.log('middle seat') : console.log('not a middle seat')
+// }
+
+// checkMiddleSeat('11B')
+// checkMiddleSeat('23C')
+// checkMiddleSeat('3E')
+
+// console.log('11C'.slice(-1))
+
+// const airline = "Turkish Airlines"
+// const plane = 'A37H'
+
+// console.log(airline.toLowerCase()) //turkish airlines
+// console.log(airline.toUpperCase()) //TURKISH AIRLINES
+
+// const name= 'mETin'
+// const lower = name.toLowerCase()
+// const fLetter = name[0].toUpperCase()
+// const newName = fLetter + lower.slice(1)
+// console.log(newName)
+
+// const email = 'metin@gmail.com'
+// const input = ' MeetiN@Gmail.com'
+// const newInput = input.split(" ").join("").toLowerCase()
+// console.log(newInput)
+
+// for(let i=0; i<email.length; i++){
+//     if(email[i] !== newInput[i]){
+//         console.log("not same")
+//     }
+// }
+
+// const word1 = 'metT@,k'
+// const word2 = word1.replace('T', "P").replace('@','$' ).replace(',', '?')
+// console.log(word2)
+
+// const checkBaggage = (items) => {
+//   const baggage = items.toLowerCase(items);
+//   if (baggage.includes("knife") || baggage.includes("gun")) {
+//     console.log("you can not fly");
+//   } else {
+//     console.log("Welcome abors");
+//   }
+// };
+
+// checkBaggage("book Food");
+// checkBaggage("book Food");
+// checkBaggage("apple knife");
+// checkBaggage("book snack");
+// checkBaggage("Pencil gun");
+
+// const cap =(name)=>{
+// const arr = name.split(" ")
+// const finalArr =[]
+// for(let item of arr){
+//     const newName = item[0].toUpperCase()+item.slice(1)
+//     finalArr.push(newName)
+// }
+// console.log(finalArr.join(" "))
+// }
+
+// cap("metin emin latif matt yildiz")
+
+// const maskCredirCard = (number) => {
+//   const str = number + " ";
+//   const lastFour = str.slice(-5);
+//   console.log(lastFour.padStart(str.length, "*"));
+// };
+
+// maskCredirCard(873873878728372);
+// maskCredirCard("27273972439293923");
+
+// const message = "Selam kelam canim cigerim"
+
+// console.log(message.repeat(20))
+
+// const underToCamel = (word) => {
+//   const arr = word.toLowerCase().split("_");
+//   const final = arr[0] + arr[1][0].toUpperCase() + arr[1].slice(1);
+//   console.log(final);
+// };
+
+// underToCamel("first_name");
+// underToCamel("calculate_AGE");
+
+// const flights =
+//   "_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30";
+
+// const arr = flights.split("+");
+// for( const flight of arr){
+//   const [type, from, to, time]= flight.split(";")
+//   const output = `${type.startsWith("_D") ? "&" : "" } ${type.replace(/_/g," ")} from ${from.slice(0,3).toUpperCase()} to ${to.slice(0,3).toUpperCase()} (${time.replace(":", 'h')})`.padStart(50)
+//   console.log(output)
+// }
+
+// const bookings = [];
+// const createBooking = (flightNum, numPassengers=1, price = numPassengers*300) => {
+//   const booking = {
+//     flightNum,
+//     numPassengers,
+//     price,
+//   };
+// bookings.push(booking)
+
+// };
+
+// createBooking('TR43')
+// createBooking('TR45', 3, 450)
+// createBooking('TR46', 5)
+
+// console.log(bookings)
+
+// const word =(str)=>{
+// return str.replace(/ /g, '').toLowerCase()
+// }
+
+// console.log(word('sEla m'))
+
+// const greeting = (greeting) => {
+//   return (name) => {
+//     console.log(`i am ${name} ${greeting}`);
+//   };
+// };
+
+// const newf= greeting("hello")
+// console.log(newf)
+// newf("metin")
+
+// greeting('mello')("ali")
+
+// const greeting = greeting => name => console.log(`i am ${name} ${greeting}`)
+// greeting('mello')("ali")
+
+// const flight = {
+//   airline: "TurkishAirlines",
+//   iataCode: "TR56",
+//   bookings: [],
+//   book(flightNum, name) {
+//     return `${this.airline} saygilar sunar, ucus numaran ${flightNum} oldumu ${name}`;
+//   },
+// };
+
+// console.log(flight.book("7472", "Ali"));
+
+// (()=> console.log("runs once"))()
+
+// let f
+// const g =()=>{
+// const num = 10
+//     f=()=>{
+//         console.log(num*2)
+//     }
+// }
+
+// g()
+// f()
+
+// const movements = [200, 450, -400, 3000, -650, -130];
+
+// for (const [i, movement] of movements.entries()) {
+//   if (movement > 0) {
+//     console.log(`${i + 1}: You deposited ${movement}`);
+//   } else {
+//     console.log(`${i + 1}: You witdrew ${Math.abs(movement)}`);
+//   }
+// }
+
+// console.log("-------forEach-------");
+// movements.forEach((movement, i, array) => {
+//   if (movement > 0) {
+//     console.log(`${i + 1}: You deposited ${movement}`);
+//   } else {
+//     console.log(`${i + 1}: You witdrew ${Math.abs(movement)}`);
+//   }
+// });
