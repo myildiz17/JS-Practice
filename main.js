@@ -556,3 +556,30 @@
 //     console.log(`${i + 1}: You witdrew ${Math.abs(movement)}`);
 //   }
 // });
+
+// const movements = [200, 450, -400, 3000, -650, -130];
+
+// const euroToUsd = 1.1
+
+// console.log(movements.map(mov=> Math.round(mov*euroToUsd)))
+
+// const movements = [200, 450, -400, 3000, -650, -130];
+
+// const sum = movements.reduce((acc, el) => acc + el, 1000);
+
+// console.log(sum);
+
+// const arr = [2,3,[4,5],7,[7,9]]
+// console.log(arr.flatMap())
+
+// const arr1 = [3,7,5,1,4,8,9]
+// const arr2 = ['Ali', 'Veli', 'Deli']
+// const arr3 = [-7,5,10,11,17,21,2]
+
+
+// arr3.sort((a,b)=> a>b ? 1 : -1)
+// console.log(arr3)
+
+// const x = Array.from("sayin bayim")
+
+// console.log(x)
