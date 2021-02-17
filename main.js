@@ -576,10 +576,243 @@
 // const arr2 = ['Ali', 'Veli', 'Deli']
 // const arr3 = [-7,5,10,11,17,21,2]
 
-
 // arr3.sort((a,b)=> a>b ? 1 : -1)
 // console.log(arr3)
 
 // const x = Array.from("sayin bayim")
 
 // console.log(x)
+
+// const dogs = [
+//   { weight: 22, curFood: 250, owners: ["Alice", "Bob"] },
+//   { weight: 8, curFood: 200, owners: ["Matilda"] },
+//   { weight: 13, curFood: 275, owners: ["Sarah", "john"] },
+//   { weight: 32, curFood: 340, owners: ["Michael"] },
+// ];
+
+// dogs.forEach((dog) => {
+//   dog.recFood = Math.round(dog.weight ** 0.75 * 28);
+// });
+
+// const dogNeeded = dogs.find((dog) => dog.owners.includes("Sarah"));
+
+// if (dogNeeded.curFood > dogNeeded.recFood) {
+//   console.log("It is eating too much");
+// } else {
+//   console.log("It is eating too little");
+// }
+
+// console.log(`Sarah dog is eating ${dogNeeded.curFood > dogNeeded.recFood ? "too much" : "too little"}`)
+// const ownersEatTooMuch = [];
+// const ownersEatTooLittle = [];
+
+// for (let dog of dogs) {
+//   if (dog.curFood > dog.recFood) {
+//     ownersEatTooMuch.push(...dog.owners);
+//   } else {
+//     ownersEatTooLittle.push(...dog.owners);
+//   }
+// }
+
+// console.log(ownersEatTooMuch, ownersEatTooLittle);
+
+// const ownersETM = ownersEatTooMuch.join(' and ')
+// const ownersETL = ownersEatTooLittle.join(' and ')
+// console.log(`${ownersETM}'s dogs eat too much and ${ownersETL}'s dogs eat too little!` )
+
+// console.log(dogs.some(dog=> dog.curFood === dog.recFood))
+// console.log(dogs.some(dog=> dog.curFood>dog.recFood*0.9 && dog.curFood>dog.recFood*1.1))
+
+// const eatingOK = dogs.filter(dog=> dog.curFood>dog.recFood*0.9 && dog.curFood<dog.recFood*1.1)
+
+// console.log(eatingOK)
+
+// const dogs2 = [...dogs]
+
+// console.log(dogs2.sort((a,b)=> a.recFood - b.recFood))
+
+//**************Examples***************** */
+
+// 1. Write a JavaScript function to check whether an `input` is an array or not. Go to the editor
+// Test Data :
+// console.log(is_array('w3resource'));
+// console.log(is_array([1, 2, 4, 0]));
+// false
+// true
+
+// const a = (x)=> console.log(`This is ${Array.isArray(x) ? '' : 'not'} an array`)
+// a({})
+
+// // console.log(typeof {})
+
+// console.log(Array.isArray({}))
+
+// 2. Write a JavaScript function to clone an array. Go to the editor
+// Test Data :
+// console.log(array_Clone([1, 2, 4, 0]));
+// console.log(array_Clone([1, 2, [4, 0]]));
+// [1, 2, 4, 0]
+// [1, 2, [4, 0]]
+
+// const arrayClone = (x)=>x.slice()
+// console.log(arrayClone([1, 2, 4, 0]));
+// console.log(arrayClone([1, 2, [4, 0]]));
+
+// 3. Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array. Go to the editor
+// Test Data :
+// console.log(first([7, 9, 0, -2]));
+// console.log(first([],3));
+// console.log(first([7, 9, 0, -2],3));
+// console.log(first([7, 9, 0, -2],6));
+// console.log(first([7, 9, 0, -2],-3));
+// Expected Output :
+// 7
+// []
+// [7, 9, 0]
+// [7, 9, 0, -2]
+// []
+
+// const first =(arr, n=1)=> arr.splice(0,n)
+// // console.log(first([2,4,5,6],1))
+// console.log(first([7, 9, 0, -2]));
+// console.log(first([],3));
+// console.log(first([7, 9, 0, -2],3));
+// console.log(first([7, 9, 0, -2],6));
+// console.log(first([7, 9, 0, -2],-3));
+
+// Write a JavaScript function to get the last element of an array. Passing a parameter 'n' will return the last 'n' elements of the array. Go to the editor
+// Test Data :
+// console.log(last([7, 9, 0, -2]));
+// console.log(last([7, 9, 0, -2],3));
+// console.log(last([7, 9, 0, -2],6));
+// Expected Output :
+// -2
+// [9, 0, -2]
+// [7, 9, 0, -2]
+
+// const last = (arr, n=1)=> arr.slice(-n)
+
+// console.log(last([7, 9, 0, -2]));
+// console.log(last([7, 9, 0, -2],3));
+// console.log(last([7, 9, 0, -2],6));
+
+// 5. Write a simple JavaScript program to join all elements of the following array into a string. Go to the editor
+// Sample array : myColor = ["Red", "Green", "White", "Black"];
+// Expected Output :
+// "Red,Green,White,Black"
+// "Red,Green,White,Black"
+// "Red+Green+White+Black"
+// const joinArr = (arr)=> arr.join(",")
+
+// console.log(joinArr(["Red", "Green", "White", "Black"]))
+
+// 6. Write a JavaScript program which accept a number as input and insert dashes (-)
+// between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8.
+
+// const putDash = (num) => {
+//   const str = num.toString();
+//   const arr = [str[0]];
+
+//   for (let i = 1; i < str.length; i++) {
+//     if (str[i - 1] % 2 === 0 && str[i] % 2 === 0) {
+//       arr.push("-", str[i]);
+//     }else{
+//         arr.push(str[i]);
+//     }
+//   }
+
+//   console.log(arr.join(''));
+// };
+
+// putDash(2436546978);
+
+// 7. Write a JavaScript program to sort the items of an array. Go to the editor
+// Sample array : var arr1 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+// Sample Output : -4,-3,1,2,3,5,6,7,8
+
+// const arr1 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ]
+
+// const sortNum = (arr)=>{
+//     arr.sort((a,b)=> a-b)
+//     console.log(arr)
+//     console.log(arr1)
+// }
+
+// sortNum(arr1)
+
+// 8. Write a JavaScript program to find the most frequent item of an array. Go to the editor
+// Sample array : var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+// Sample Output : a ( 5 times )
+
+// const freq = (arr) => {
+//     const obj = {};
+//   for (let el of arr) {
+//     obj[el] = (obj[el] || 0) + 1;
+//   }
+
+//   const values = Object.values(obj);
+//   const maxValue = Math.max(...values);
+//   let maxProp;
+
+//   for (let [i, v] of Object.entries(obj)) {
+//     if (v === 5) {
+//       maxProp = i;
+//       console.log(maxProp);
+//     }
+//   }
+// };
+
+// freq([3, "a", "a", "a", 2, 3, "a", 3, "a", 2, 4, 9, 3]);
+
+// 9. Write a JavaScript program which accept a string as input and swap the case of each character.
+// For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
+
+// const revOrder = (str) => {
+//   const strSplt = str.split(" ");
+
+//   const revsed = strSplt.map((el) => {
+//       const elLower = el.split("").reverse().join("").toLowerCase()
+//       const updated = elLower[0].toUpperCase()+elLower.slice(1)
+//       return updated
+//     });
+//   console.log(revsed.join(" "));
+// };
+
+// revOrder('The Quick Brown Fox')
+
+// 10. Write a JavaScript program which prints the elements of the following array. Go to the editor
+// Note : Use nested for loops.
+// Sample array : var a = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
+// Sample Output :
+// "row 0"
+// " 1"
+// " 2"
+// " 1"
+// " 24"
+// "row 1"
+// ------
+// ------
+
+// const printArray = (arr) => {
+//   for (const [i, v] of arr.entries()) {
+//     console.log("row"+i);
+//     for (const el of v) {
+//       console.log(el);
+//     }
+//   }
+// };
+
+// a = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]]
+// printArray(a)
+
+// 11. Write a JavaScript program to find the sum of squares of a numeric vector.
+
+const sumSq = (arr) => {
+  let sum = 0;
+  for (const el of arr) {
+    sum += el * el;
+  }
+  return sum;
+};
+
+console.log(sumSq([0, 2, 4, 5, 7, -2]));
