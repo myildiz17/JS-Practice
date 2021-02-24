@@ -807,12 +807,561 @@
 
 // 11. Write a JavaScript program to find the sum of squares of a numeric vector.
 
-const sumSq = (arr) => {
-  let sum = 0;
-  for (const el of arr) {
-    sum += el * el;
-  }
-  return sum;
-};
+// const sumSq = (arr) => {
+//   let sum = 0;
+//   for (const el of arr) {
+//     sum += el * el;
+//   }
+//   return sum;
+// };
 
-console.log(sumSq([0, 2, 4, 5, 7, -2]));
+// console.log(sumSq([0, 2, 4, 5, 7, -2]));
+
+////////LECTURE////////////
+
+// const charCount = (str) => {
+//     const lStr = str.toLowerCase()
+//   const result = {};
+
+//   for (let i = 0; i < lStr.length; i++) {
+//     if(/[a-z0-9]/.test(lStr[i])){result[lStr[i]]= ++result[lStr[i]] || 0}
+//   }
+//   return result;
+// };
+
+// const charCount=(str)=>{
+//     const result={}
+//     const lstr = str.toLowerCase()
+//     for(const char of lstr){
+//         if(/[a-z0-9]/.test(char)){
+//             result[char]= result[char]++ || 0
+//         }
+//     }
+//     return result
+// }
+
+// // console.log(charCount("Sselam mmaae!"));
+
+// const same = (arr1, arr2) => {
+//   if (arr1.length !== arr2.length) {
+//     return "they dont have same length";
+//   }
+
+//   const obj1 = {};
+//   const obj2 = {};
+
+//   for (const el of arr1) {
+//     obj1[el] = ++obj1[el] || 1;
+//   }
+//   for (const el of arr2) {
+//     obj2[el] = ++obj2[el] || 1;
+//   }
+
+//   for (const pro in obj1) {
+//     if (obj1[pro] !== obj2[pro*pro]) {
+//       return "they are not same";
+//     }
+//   }
+
+//   return "They are same"
+// };
+
+// console.log(same([1, 2, 3], [4, 1, 8]));
+
+////ANagram//
+
+// const anagram = (str1, str2) => {
+//   if (str1.length !== str2.length) {
+//     return "String sizes are different";
+//   }
+
+//   const obj1 = {};
+
+//   for (const char of str1) {
+//     obj1[char] = ++obj1[char] || 1;
+//   }
+// console.log(obj1)
+//   for (const char of str2) {
+//     if (!obj1[char]) {
+//       return "They are not Anagram";
+//     } else {
+//       obj1[char] -= 1;
+//     }
+//   }
+//   return "They are Anagram";
+// };
+
+// console.log(anagram("anagram", "nagaram"));
+
+///double pointer problems////////
+
+// const sumZero = (arr) => {
+//   let left = 0;
+//   let right = arr.length - 1;
+//   while (left < right) {
+//     if (arr[left] + arr[right] === 0) {
+//       return [arr[left], arr[right]];
+//     } else if (arr[left] + arr[right] > 0) {
+//       right--;
+//     } else {
+//       left++;
+//     }
+//   }
+
+//   return "There is none";
+// };
+
+// console.log(sumZero([-4, -3, -2, 0, 1, 2, 5]));
+
+///////Coiunt Unique Values //////////////
+
+// const countUniqeValues = (arr) => {
+//   let first = 0;
+//   let second = 1;
+//   while (second < arr.length) {
+//     if (arr[first] !== arr[second]) {
+//         first++
+//         arr[first]=arr[second]
+//         second++
+//     } else {
+//       second++;
+//     }
+//   }
+//   return (arr.slice(0,first+1))
+// };
+
+// console.log(countUniqeValues([1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13]));
+// console.log(countUniqeValues([-2,-1,-1,0,1]));
+
+// const maxSum = (arr, num) => {
+//   let sum = 0;
+//   for (let i = 0; i < num; i++) {
+//     sum += arr[i];
+//   }
+//   for(let i=num; i<arr.length; i++){
+//       if(sum+arr[i]-arr[i-num]>sum){
+//         sum = sum+arr[i]-arr[i-num]
+//       }
+//   }
+
+//   return sum
+// };
+
+// console.log(maxSum([1, 2, 5, 2,9, 8, 7,9, 5], 2));
+
+// sameFrequency = (num1, num2) => {
+
+//   const newNum1 = num1 + "";
+//   const newNum2 = num2 + "";
+//   if(newNum1.length !== newNum2.length){
+//       return "They dont have the same size"
+//   }
+
+//   const obj1 = {};
+//   const obj2 = {};
+
+//   for(const char of newNum1 ){
+//       obj1[char]= ++obj1[char] || 1
+//   }
+//   for(const char of newNum2){
+//       obj2[char]= ++obj2[char] || 1
+//   }
+
+//   for(const el in obj1){
+//       if(obj1[el] !== obj2[el]){
+//           return "They don't have same frequency"
+//       }else{
+//         return "They have the same frequency"
+//       }
+//   }
+//   console.log(obj1, obj2)
+// };
+
+// console.log(sameFrequency(1825, 281));
+// console.log(sameFrequency(3589578, 5879385));
+// console.log(sameFrequency(220, 222));
+
+//
+
+// const averagePair = (arr, num) => {
+//   let left = 0;
+//   let right = arr.length - 1;
+//   while (left < right) {
+//     let avg = (arr[left] + arr[right]) / 2;
+//     if (avg === num) {
+//       return [arr[left], arr[right]];
+//     } else if (avg > num) {
+//       right--;
+//     } else {
+//       left++;
+//     }
+//   }
+
+//   return "No pairs";
+// };
+
+// console.log(averagePair([1, 2, 3], 2.5));
+// console.log(averagePair([1, 2, 6, 7], 2.5));
+// console.log(averagePair([1, 3, 3, 5, 6, 7, 10, 12, 19], 8));
+
+// const isSubsequence = (arr1, arr2) => {
+//   let first = 0;
+//   let second = 0;
+
+//   while (second < arr2.length) {
+//     if (arr1[first] === arr2[second]) {
+//       first++;
+//     } else {
+//       second++;
+//     }
+//   }
+//   if (first === arr1.length) {
+//     return "Yes includes";
+//   } else {
+//     return "No it does not include";
+//   }
+// };
+
+// console.log(isSubsequence("sine", "stdffidddfdfnddde"));
+
+//
+
+// const countdown = (num) => {
+//   if (num <= 0) {
+//     console.log("done");
+//     return;
+//   }
+//   console.log(num);
+//   num--;
+//   countdown(num);
+// };
+
+// countdown(10);
+
+// const sumRange=(num)=>{
+//     if(num=== 1)return 1
+//     return num+sumRange(num-1)
+// }
+
+// console.log(sumRange(10))
+
+// const fcat =(num)=>{
+//     if(num === 1) return 1
+//     return num*fcat(num-1)
+// }
+
+// console.log(fcat(10))
+
+// const collectOdds = (arr) => {
+//   let result = [];
+
+//   const recFunc = (arr) => {
+//     if (arr.length === 0) return;
+//     if (arr[0] % 2 === 0) {
+//       result.push(arr[0]);
+//     }
+//     recFunc(arr.slice(1));
+//   };
+
+//   recFunc(arr);
+
+//   return result;
+// };
+
+// console.log(collectOdds([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+
+// const power = (b, p) => {
+//   if (p === 0) return 1;
+//   return b * power(b, p - 1);
+// };
+
+// console.log(power(2, 5));
+
+// const power = (b, p) => {
+//     let pow = 1;
+//   for (let i = 0; i < p ; i++) {
+//     pow *= b;
+//   }
+//   return pow
+// };
+
+// console.log(power(2, 5));
+
+// const factorail = (n) => {
+//   let result = 0;
+//   if (n === 0) return 1;
+//   result = n * factorail(n - 1);
+
+//   return result;
+// };
+
+// console.log(factorail(4));
+
+// const productOfArray = (arr) => {
+//   if (arr.length === 0) return 1;
+//   return arr[0] * productOfArray(arr.slice(1));
+// };
+
+// console.log(productOfArray([1, 2, 3, 4, 6, 8, 9]));
+
+// const recursiveRange = (num)=>{
+//     if(num === 0 ) return 0
+//     return  num+recursiveRange(num-1)
+// }
+
+// console.log(recursiveRange(10))
+
+// const fibFunc = (num) => {
+//   let arr = [1, 1];
+//   const fib = (num) => {
+//       if(num === 0 ) return arr[arr.length-1];
+//     arr.push(arr[arr.length-1] + arr[arr.length-2]);
+//     fib(num - 1);
+//   };
+//   fib(num-2)
+//   console.log(arr[arr.length-1])
+
+// };
+
+// console.log(fibFunc(10));
+// const fReverse=(input)=>{
+//     let str = "";
+//     const reverse = (input) => {
+//       let num = input.length;
+
+//       if (num === 0) return;
+//       str = input[0] + str
+//       num--
+//       reverse(input.slice(1));
+//     };
+
+//     reverse(input)
+//     console.log(str)
+// }
+
+// console.log(fReverse("selam kelam canim cicim"));
+
+// const isPalindrome = (str) => {
+//   const obj = {};
+//   for (const el of str) {
+//     obj[el] = ++obj[el] || 1;
+//   }
+//   if (Object.values(obj).filter((el) => el === 1).length > 1) {
+//     return "Not a palindrome";
+//   } else {
+//     return "Yes it is a palindrome";
+//   }
+// };
+
+// console.log(isPalindrome("tacorrcat"));
+
+// const findIndex = (arr, num) => {
+//   if (arr.indexOf(num)) {
+//     return arr.indexOf(num);
+//   } else {
+//     return -1;
+//   }
+// };
+
+// console.log(findIndex([2, 4, 7, 9, 5, 12, 15, 18, "can"], "can"));
+
+// const binary = (arr, num) => {
+//   let left = 0;
+//   let right = arr.length - 1;
+//   let middle = Math.round((right + left) / 2);
+
+//   while (arr[middle] !== num && left <= right) {
+//     if (arr[middle] > num) {
+//       right = middle - 1;
+//     } else {
+//       left = middle + 1;
+//     }
+//     middle = Math.round((right + left) / 2);
+//   }
+
+//   if (arr[middle] === num) {
+//     return middle;
+//   }else{
+//       return -1
+//   }
+// };
+
+// console.log(binary([1, 3, 5, 7, 9, 12, 14, 15, 17, 18], 25));
+
+// const compStrs = (strl, strs) => {
+//     let count = 0
+//   for(let i=0; i<strl.length; i++){
+//       for(let j=0; j<strs.length; j++){
+//           if(strs[j]!==strl[j+i]){
+//               break
+//           }
+//           if(j === strs.length -1){
+//               console.log("Found One")
+//               count++
+//           }
+//       }
+//   }
+//   return count
+// };
+
+// console.log(compStrs("wowomgzomg", "omg"));
+
+// const str = "selam kelam"
+// const arr=["Veli", "Celi", "ALi"]
+// const arr1=[5,8,2,45,79,56,1]
+// console.log(arr.sort())
+// const c= arr1.sort((a,b)=>a-b)
+// console.log(c)
+
+// const bubble=(arr)=>{
+
+// for(const i; i<arr.length; i++){
+//     if(arr[])
+// }
+// }
+
+// console.log(bubble([3,2,5,3,8,1]))
+
+//////////Signly Linked lISt//////////////
+
+// class Node {
+//   constructor(val) {
+//     this.val = val;
+//     this.next = null;
+//   }
+// }
+
+// class SinglyLinkedList {
+//   constructor() {
+//     this.head = null;
+//     this.tail = null;
+//     this.length = 0;
+//   }
+
+//   push(val) {
+//     let newNode = new Node(val);
+//     if (!this.head) {
+//       this.head = newNode;
+//       this.tail = this.head;
+//     } else {
+//       this.tail.next = newNode;
+//       this.tail = newNode;
+//     }
+//     this.length++;
+//     return this;
+//   }
+
+//   pop() {
+//     if (!this.head) return undefined;
+//     let current = this.head;
+//     let newTail = current;
+//     while (current.next) {
+//       newTail = current;
+//       current = current.next;
+//     }
+
+//     this.tail = newTail;
+//     this.tail.next = null;
+//     this.length--;
+//     return current;
+//   }
+
+//   tarverse() {
+//     let current = this.head;
+//     let child = current.next;
+//     while (current) {
+//       console.log(current.val);
+//       current = current.next;
+//     }
+//   }
+// }
+
+// let list = new SinglyLinkedList();
+// console.log(list.push("Hello"));
+// console.log(list.push("You"));
+// console.log(list.push("How"));
+// console.log(list.push("Are"));
+// console.log(list.push("you"));
+// console.log(list.push("today"));
+// console.log(list.tarverse());
+
+//*********************************LEETCODE******************************************
+
+//**********************Two Sum ***********************************************/
+// const twoSum = (nums, target) => {
+//   for (let i = 0; i < nums.length - 1; i++) {
+//     for (let j = i + 1; j < nums.length; j++) {
+//       if (nums[i] + nums[j] === target) {
+//         return [i, j];
+//       } else {
+//         return "none";
+//       }
+//     }
+//   }
+// };
+
+// console.log(twoSum([2, 7, 11, 15], 9));
+
+// var twoSum = function(nums, target) {
+//     let map = new Map;
+//     for (var i = 0; i < nums.length; i++) {
+//         let complement = target - nums[i];
+//         if (map.has(complement)) {
+//             return [map.get(complement), i]
+//         }
+//         map.set(nums[i], i);
+//     }
+// }
+
+// console.log(twoSum([2, 6, 11, 15,7], 9));
+
+// var twoSum = function(nums, target) {
+//     let obj = {};
+//     for (var i = 0; i < nums.length; i++) {
+//         let complement = target - nums[i];
+//         if (Object.values(obj).includes(complement)) {
+//             return [nums[i], complement]
+//         }
+//         obj[i]= nums[i]
+//     }
+//     console.log(obj)
+//     console.log(Object.keys(obj))
+// }
+
+// console.log(twoSum([2, 6, 11, 15,7], 9));
+
+//********************** Reverse Integer ***********************************************/
+
+// const reverseInt=(num)=>{
+// const str = num+""
+// const reversed = parseInt(str.split("").reverse().join(""))
+// return reversed
+// }
+
+// console.log(reverseInt(123433433))
+
+//********************** Palindrome Integer ***********************************************/
+
+// const palindrome = (num) => {
+//   const str = num + "";
+//   const obj = {};
+//   for (let char of str) {
+//     obj[char] = ++obj[char] || 1;
+//   }
+
+//   const arr = Object.values(obj);
+//   let odd = 0;
+//   for (let el of arr) {
+//     if (el % 2 !== 0) {
+//       odd++;
+//     }
+//   }
+
+//   if (odd > 1) {
+//     return "No it is not a palindrom";
+//   } else {
+//     return "Yes it is a palindrom";
+//   }
+// };
+
+// console.log(palindrome(74236746));
