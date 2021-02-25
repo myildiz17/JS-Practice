@@ -1365,3 +1365,148 @@
 // };
 
 // console.log(palindrome(74236746));
+
+//********************** Anagram ***********************************************/
+
+// const anagram = (str1, str2) => {
+//   if (str1.length !== str2.length) return false;
+//   const obj = {};
+
+//   for (let char of str1) {
+//     obj[char] = ++obj[char] || 1;
+//   }
+
+//   for (let char of str2) {
+//     if (!obj[char]) {
+//       return false;
+//     } else {
+//       obj[char] -= 1;
+//     }
+//   }
+
+//   return true;
+// };
+
+// console.log(anagram("anagram", "nagtmara"));
+// console.log(anagram("anagram", "nagmara"));
+
+//********************** Count Unique Values ***********************************************/
+
+// const uniqueValues = (arr) => {
+//   let i = 0;
+//   for (let j = 1; j < arr.length; j++) {
+//     if (arr[i] !== arr[j]) {
+//       i++;
+//       arr[i] = arr[j];
+//     }
+//   }
+
+//   return i;
+// };
+
+// console.log(uniqueValues([1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 8, 9]));
+
+//********************** areThereDublicates ***********************************************/
+
+// const areThereDublicates = (...arg) => {
+//   const obj = {};
+//   for (let el of arg) {
+//     obj[el] = ++obj[el] || 1;
+//   }
+
+//   for(let key in obj ){
+//       if(obj[key]>1){
+//           return true
+//       }else{
+//           return false
+//       }
+//   }
+// };
+
+// console.log(areThereDublicates(1, 2, 3, 4, 5,5, 6));
+
+// const areThereDublicates = (...arg) => {
+//   return new Set(arg).size !== arg.length;
+// };
+
+// console.log(areThereDublicates(1, 2, 3, 4, 5, 6));
+
+//********************** averagePair ***********************************************/
+
+// const averagePair = (arr, num) => {
+//   let start = 0;
+//   let end = arr.length - 1;
+
+//   while (start < end) {
+//     const ave = (arr[start] + arr[end]) / 2;
+//     if (ave === num) {
+//       return [arr[start], arr[end]];
+//     } else if (ave > num) {
+//       end--;
+//     } else {
+//       start++;
+//     }
+//   }
+
+//   return "No average pairs";
+// };
+
+// console.log(averagePair([1, 3, 3, 5, 6, 7, 10, 12, 19], 8));
+
+//********************** isSubsequence ***********************************************/
+
+// const isSubsequence = (str1, str2) => {
+//   let i = 0;
+//   let j = 0;
+
+//   while (j < str2.length) {
+//     if (str2[j] === str1[i]) i++;
+//     if (i === str1.length) return true;
+
+//     j++;
+//   }
+
+//   return false;
+// };
+
+// console.log(isSubsequence("sing", "trshnjg"));
+
+//********************** maxSubarraySUm ***********************************************/
+
+// const maxSubarraySUm = (arr, num) => {
+//   let temp = 0;
+//   let max = 0;
+
+//   for (let i = 0; i < num; i++) {
+//     temp += arr[i];
+//   }
+//   max = temp;
+//   for (let i = num; i < arr.length; i++) {
+//     temp = temp + arr[i] - arr[i - num];
+//     max = Math.max(temp, max);
+//   }
+
+//   console.log(max);
+// };
+
+// console.log(maxSubarraySUm([2, 6, 9, 2, 1, 8, 5, 6, 3], 2));
+
+
+// function findLongestSubstring(str) {
+//     let longest = 0;
+//     let seen = {};
+//     let start = 0;
+   
+//     for (let i = 0; i < str.length; i++) {
+//       let char = str[i];
+//       if (seen[char]) {
+//         start = Math.max(start, seen[char]);
+//       }
+//       // index - beginning of substring + 1 (to include current in count)
+//       longest = Math.max(longest, i - start + 1);
+//       // store the index of the next char so as to not double count
+//       seen[char] = i + 1;
+//     }
+//     return longest;
+//   }
+
