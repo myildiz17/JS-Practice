@@ -1491,12 +1491,11 @@
 
 // console.log(maxSubarraySUm([2, 6, 9, 2, 1, 8, 5, 6, 3], 2));
 
-
 // function findLongestSubstring(str) {
 //     let longest = 0;
 //     let seen = {};
 //     let start = 0;
-   
+
 //     for (let i = 0; i < str.length; i++) {
 //       let char = str[i];
 //       if (seen[char]) {
@@ -1509,4 +1508,113 @@
 //     }
 //     return longest;
 //   }
+
+//********************** Recursion CountRange ***********************************************/
+
+// const sumRange=(num)=>{
+//     if(num === 1) return 1
+// return num+sumRange(num-1)
+// }
+
+// console.log(sumRange(5))
+
+//********************** Recursion countDown ***********************************************/
+
+// const countDown = (num) => {
+//   if (num <= 0) {
+//      console.log('Alldone!')
+//      return
+// };
+// console.log(num);
+// num--;
+// countDown(num)
+// }
+
+// countDown(567);
+
+//********************** Recursion Factorial ***********************************************/
+
+// const factorial = (num) => {
+//   if (num === 0) return 1
+//   return num * factorial(num - 1);
+// };
+
+// console.log(factorial(4));
+
+//********************** Running Sum of 1d Array ***********************************************/
+
+// const runningSum = (arr) => {
+//   const output = [arr[0]];
+//   for (let i = 1; i < arr.length; i++) {
+//     output.push(arr[i] + output[i - 1]);
+//   }
+//   return output;
+// };
+
+// console.log(runningSum([3, 1, 2, 10,1]));
+
+//********************** Defanging an IP Address ***********************************************/
+
+// const defangIPadd = (str)=>{
+// return str.split('.').join('[.]')
+// }
+
+// console.log(defangIPadd("1.1.1.1"))
+
+//********************** Defanging an IP Address ***********************************************/
+
+// const kidsWithCandies = (arr, num) => {
+//   const max = Math.max(...arr);
+//   let outpurArr = [];
+//   for (let el of arr) {
+//     if (el + num >= max) {
+//       outpurArr.push(true);
+//     } else {
+//       outpurArr.push(false);
+//     }
+//   }
+//   return outpurArr
+// };
+
+// console.log(kidsWithCandies([2, 3, 5, 1, 3], 3));
+
+//********************** Suffle the Array ***********************************************/
+
+// const shuffleTheArray = (arr) => {
+//   let newArray = [];
+//   const num = arr.length / 2;
+//   for (let i = 0; i < arr.length / 2; i++) {
+//     newArray.push(arr[i], arr[i + num]);
+//   }
+//   return newArray;
+// };
+
+// console.log(shuffleTheArray([1, 5, 1, 3, 4, 7]));
+
+// //********************** Richest Customer Wealth ***********************************************/
+
+// const maxWealth = (arr) => {
+//   const outputArr = [];
+//   for (let el of arr) {
+//     let sum = 0;
+//     for (let i of el) {
+//       sum += i;
+//     }
+//     outputArr.push(sum);
+//   }
+
+//   return Math.max(...outputArr);
+// };
+
+// console.log(
+//   maxWealth([
+//     [1, 5],
+//     [7, 3],
+//     [3, 5],
+//   ])
+// );
+
+
+// let red = Symbol('red')
+// console.log(red)
 
