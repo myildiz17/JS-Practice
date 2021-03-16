@@ -1614,7 +1614,96 @@
 //   ])
 // );
 
-
 // let red = Symbol('red')
 // console.log(red)
 
+// let a = 5
+// let b = a
+// a= 6
+// console.log(a,b)
+
+// let a = {
+//   name: 'Ali',
+//   lname: 'Can'
+// }
+
+// let b = a
+
+// a.name = 'Veli'
+
+//  const c = Object.assign({},a)
+//  c.name = 'Telli'
+// console.log(a,b,c)
+
+// a = 1;
+
+// console.log(a+1)
+
+// var a;
+// "use strict"
+// add()
+
+// function add(){
+//   console.log(2+1)
+// }
+
+// const add = function(){
+//   console.log(2+1)
+// }
+
+// const add = ()=>{
+//   console.log(2+1)
+// }
+// "use strict"
+// x=3
+// var x;
+// console.log(x)
+// 'use strict'
+
+// let ab = false;
+// let b = true;
+
+// if (b) a = true;
+// if (ab) console.log("hi")
+
+// function addd(a,b){
+//   return a+b
+// }
+
+
+
+// const add = function (a,b){
+//   return a+b
+// } 
+
+// const adddd = (a,b)=>{
+//   return a+b
+// }
+// console.log(add(2,3))
+// console.log(addd(2,3))
+// console.log(adddd(2,3))
+
+
+// a = 5
+// console.log(a*3)
+// var a;
+
+// var a={},
+//     b={key:'b'},
+//     c={key:'c'};
+
+//     a[c]=456;
+//     a[b]=123;
+
+// console.log(a[c]);
+
+// const add = function (a,b){
+//   console.log(arguments)
+// }
+
+const add2 = (a,b) => {
+  console.log(arguments)
+}
+
+// add(2,4,6)
+add2(2,4,6)
