@@ -1670,11 +1670,9 @@
 //   return a+b
 // }
 
-
-
 // const add = function (a,b){
 //   return a+b
-// } 
+// }
 
 // const adddd = (a,b)=>{
 //   return a+b
@@ -1682,7 +1680,6 @@
 // console.log(add(2,3))
 // console.log(addd(2,3))
 // console.log(adddd(2,3))
-
 
 // a = 5
 // console.log(a*3)
@@ -1701,9 +1698,60 @@
 //   console.log(arguments)
 // }
 
-const add2 = (a,b) => {
-  console.log(arguments)
-}
+// const add2 = (a,b) => {
+//   console.log(arguments)
+// }
 
 // add(2,4,6)
-add2(2,4,6)
+// add2(2,4,6)
+
+// const obj = { a: 1, b:2}
+// const obj2 = Object.assign(obj, {})
+
+// (()=> console.log(2+5))()
+
+// (function add(){console.log(2+8)})()
+
+// const add  = (a,b=3,c)=>{
+//   console.log(a+b+c)
+// }
+
+// add(2,6,7)
+// add(2,undefined,5)
+
+// let f;
+
+// const g = function () {
+//   const a = 23;
+//   f = function () {
+//     console.log(a * 2);
+//   };
+// };
+
+// g()
+// f()
+
+
+// const arr1 = [1,2,3,4]
+// const arr2 = [1,4,9,15]
+
+// for(const el of arr1){
+//   if(arr1.length === arr2.length && arr2.includes(el*el)){
+//     console.log('true')
+//   }else{
+//     console.log('false')
+//   }
+// }
+
+const charCount=(str)=>{
+  const result={}
+  const lstr = str.toLowerCase()
+  for(const char of lstr){
+      if(/[a-z0-9]/.test(char)){
+          result[char]= ++result[char] || 0
+      }
+  }
+  return result
+}
+
+console.log(charCount("Sselam mmaae!"));
