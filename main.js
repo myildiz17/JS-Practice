@@ -1731,7 +1731,6 @@
 // g()
 // f()
 
-
 // const arr1 = [1,2,3,4]
 // const arr2 = [1,4,9,15]
 
@@ -1743,15 +1742,130 @@
 //   }
 // }
 
-const charCount=(str)=>{
-  const result={}
-  const lstr = str.toLowerCase()
-  for(const char of lstr){
-      if(/[a-z0-9]/.test(char)){
-          result[char]= ++result[char] || 0
-      }
-  }
-  return result
-}
+// const charCount=(str)=>{
+//   const result={}
+//   const lstr = str.toLowerCase()
+//   for(const char of lstr){
+//       if(/[a-z0-9]/.test(char)){
+//           result[char]= ++result[char] || 1
+//       }
+//   }
+//   return result
+// }
 
-console.log(charCount("Sselam mmaae!"));
+// console.log(charCount("Sselam mmaae!"));
+
+// const charCount =(str)=>{
+// const lstr = str.toLowerCase()
+// const result = {}
+
+// for(const char of lstr){
+//   if(/[a-z0-9]/.test(char))
+//   result[char] = ++result[char] || 1
+// }
+// return result
+// }
+
+// // console.log(charCount("seeHHaskj ajjsk"))
+
+// const str = "aacbccc";
+// const str2 = "bccaacc";
+
+// const anag = (str, str2) => {
+//   const obj1 = {};
+//   const obj2 = {};
+
+//   for (char of str) {
+//     obj1[char] = ++obj1[char] || 1;
+//   }
+//   for (char of str2) {
+//     obj2[char] = ++obj2[char] || 1;
+//   }
+
+//   for (el in obj1) {
+//     if (obj1[el] !== obj2[el]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
+
+// console.log(anag(str, str2));
+
+// const str = "aacbccc";
+// const str2 = "bccaacc";
+
+// const anag = (str, str2) => {
+//   const obj1 = {};
+
+//   for (const char of str) {
+//     obj1[char] = ++obj1[char] || 1;
+//   }
+
+//   for (const char of str2) {
+//     if (!obj1[char]) {
+//       return false;
+//     }else{
+//       obj1[char] -= 1
+//     }
+//   }
+//   return true;
+// };
+
+// console.log(anag(str, str2));
+
+// const sumZero = (arr) => {
+//   let left = 0;
+//   let right = arr.length - 1;
+
+//   while (left < right) {
+//     const sum = arr[right] + arr[left]
+//     if (sum === 0) {
+//       return "yes"
+//     } else if (sum > 0) {
+//       right--;
+//     } else {
+//       left++;
+//     }
+//   }
+// };
+
+// const arr = [-4, -2, 0, 1, 2, 5];
+
+// console.log(sumZero(arr));
+
+
+// const arr = [1,1,1,1,2,2,2,3,4,4,5]
+
+// const unique = (arr)=>{
+// const obj = {}
+
+// for(el of arr){
+//   obj[el] = ++obj[el] || 1
+// }
+
+// return Object.keys(obj).length
+
+// }
+
+// console.log(unique(arr))
+
+// const arr = [1,2,5,2,8,11,5]
+
+// const maxSum = (arr, num)=>{
+//   let sum = 0
+//   for(let i=0; i<num; i++){
+//     sum += arr[i] 
+//   }
+//   let temp = 0
+//   for(let i=num; i<arr.length-1; i++){
+//     temp = sum+arr[i]-arr[i-num]
+//     sum = Math.max(temp,sum)
+//   }
+
+//   return sum
+
+// }
+
+// console.log(maxSum(arr,2))
+
